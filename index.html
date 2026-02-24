@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gané o Perdí Fácil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <div class="card">
+    <h1>Gané o Perdí</h1>
+
+    <div id="status" class="status">Empate por ahora</div>
+
+    <div class="counters">
+      <div class="counter">
+        <div class="label">Derrotas</div>
+        <div id="losses" class="value">0</div>
+      </div>
+
+      <div class="counter">
+        <div class="label">Victorias</div>
+        <div id="wins" class="value">0</div>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="btnLose" class="lose">Perdí</button>
+      <button id="btnWin" class="win">Gané</button>
+    </div>
+
+    <button id="btnTask" class="taskBtn">Dame una tarea</button>
+
+    <!-- Botón discreto -->
+    <div class="adminArea">
+      <button id="adminBtn" class="adminBtn">Editar tareas</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal tarea -->
+<div id="taskModal" class="modal hidden">
+  <div class="modalCard">
+    <h2>Tarea</h2>
+    <p id="taskText"></p>
+    <button id="closeTask">Cerrar</button>
+  </div>
+</div>
+
+<!-- Modal admin -->
+<div id="adminModal" class="modal hidden">
+  <div class="modalCard">
+    <h2>Administrar tareas</h2>
+
+    <div id="taskList"></div>
+
+    <div class="addRow">
+      <input type="text" id="newTaskInput" placeholder="Nueva tarea">
+      <button id="addTaskBtn">Agregar</button>
+    </div>
+
+    <button id="closeAdmin">Cerrar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+:root{
+  --bg:#0f1226;
+  --card:#171a35;
+  --green:#22c55e;
+  --red:#ef4444;
+  --text:#e6e8ff;
+  --muted:#9aa0ff;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
+}
+
+body{
+  margin:0;
+  min-height:100dvh;
+  background:radial-gradient(1200px 800px at 50% -10%, #1f2560, var(--bg));
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px;
+}
+
+.app{
+  width:100%;
+  max-width:480px;
+}
+
+.card{
+  background:linear-gradient(180deg,#1b1f46,var(--card));
+  border-radius:24px;
+  padding:20px;
+  box-shadow:0 20px 40px rgba(0,0,0,.35);
+  text-align:center;
+}
+
+.status{
+  font-weight:700;
+  font-size:20px;
+  margin:12px 0;
+}
+
+.counters{
+  display:flex;
+  gap:12px;
+  margin-bottom:18px;
+}
+
+.counter{
+  flex:1;
+  background:#0f1230;
+  border-radius:18px;
+  padding:14px;
+}
+
+.counter div{
+  font-size:34px;
+  font-weight:800;
+}
+
+.buttons{
+  display:flex;
+  gap:12px;
+  margin-top:10px;
+}
+
+button{
+  border:none;
+  border-radius:18px;
+  padding:14px 12px;
+  font-size:16px;
+  font-weight:700;
+  color:white;
+  transition:.15s;
+  cursor:pointer;
+}
+
+button:active{
+  transform:scale(.97);
+  filter:brightness(.95);
+}
+
+.win{
+  flex:1;
+  background:linear-gradient(135deg,#16a34a,var(--green));
+}
+
+.lose{
+  flex:1;
+  background:linear-gradient(135deg,#b91c1c,var(--red));
+}
+
+.taskBtn{
+  width:100%;
+  margin-top:14px;
+  background:#2a2f66;
+}
+
+/* MODAL */
+
+.modal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.85);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px;
+}
+
+.modalCard{
+  background:linear-gradient(180deg,#1b1f46,var(--card));
+  border-radius:20px;
+  padding:18px;
+  width:100%;
+  max-width:420px;
+  max-height:90dvh;
+  display:flex;
+  flex-direction:column;
+}
+
+.hidden{
+  display:none;
+}
+
+/* LISTA GRANDE */
+
+#taskList{
+  flex:1;
+  overflow-y:auto;
+  margin-bottom:10px;
+}
+
+.taskItem{
+  display:flex;
+  gap:6px;
+  margin-bottom:6px;
+}
+
+.taskNumber{
+  width:28px;
+  font-size:12px;
+  color:var(--muted);
+  text-align:right;
+}
+
+.taskItem input{
+  flex:1;
+  background:#0f1230;
+  border:none;
+  border-radius:12px;
+  padding:8px;
+  color:white;
+  font-size:13px;
+}
+
+.taskItem button{
+  background:var(--red);
+  border-radius:12px;
+  padding:8px 10px;
+  font-size:12px;
+}
+
+/* AGREGAR */
+
+.addRow{
+  display:flex;
+  gap:6px;
+  margin-bottom:10px;
+}
+
+.addRow input{
+  flex:1;
+  background:#0f1230;
+  border:none;
+  border-radius:12px;
+  padding:8px;
+  color:white;
+}
+
+.addRow button{
+  background:var(--green);
+  border-radius:12px;
+  padding:8px 12px;
+}
+
+/* ADMIN DISCRETO */
+
+.adminBtn{
+  position:fixed;
+  bottom:10px;
+  right:14px;
+  background:none;
+  border:none;
+  font-size:12px;
+  color:#555;
+  cursor:pointer;
+}
+
+.adminBtn:hover{
+  color:#888;
+}
